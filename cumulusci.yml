@@ -1,0 +1,27 @@
+minimum_cumulusci_version: '4.10.0'
+project:
+    name: cci-pet-care-app
+    package:
+        name: cci-pet-care-app
+        api_version: '66.0'
+    git:
+        default_branch: 'main'
+    test:
+        name_match: '%TEST%'
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/cci-pet-care-app/tests
+            options:
+                outputdir: robot/cci-pet-care-app/results
+
+    robot_testdoc:
+        options:
+            path: robot/cci-pet-care-app/tests
+            output: robot/cci-pet-care-app/doc/cci-pet-care-app_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
