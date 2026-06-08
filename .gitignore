@@ -51,3 +51,7 @@ $RECYCLE.BIN/
 .idea
 .project
 .settings
+
+# Salesforce Org Metadata
+**/profiles/
+**/AppMenus/

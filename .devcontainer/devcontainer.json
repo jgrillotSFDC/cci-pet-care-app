@@ -14,5 +14,5 @@
     }
   },
   "remoteUser": "root",
-  "postCreateCommand": "sf --version && sf plugins --core && cci version"
+  "postCreateCommand": "bash -lc 'source /etc/profile.d/cumulusci-key.sh && sf --version && sf plugins --core && cci version'"
 }

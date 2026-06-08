@@ -35,3 +35,12 @@ RUN echo "y" | sf plugins install code-analyzer \
 RUN pipx ensurepath \
     && pipx install cumulusci \
     && cci version
+
+# Linux containers typically do not have a functioning OS keychain.
+# Pre-create and load a 16-char CumulusCI key for credential encryption.
+RUN mkdir -p /root/.cumulusci \
+    && if [ ! -s /root/.cumulusci/cumulusci.key ]; then tr -dc 'A-Za-z0-9' </dev/urandom | head -c 16 > /root/.cumulusci/cumulusci.key; echo >> /root/.cumulusci/cumulusci.key; fi \
+    && chmod 600 /root/.cumulusci/cumulusci.key \
+    && printf "export CUMULUSCI_KEY=\"\$(tr -d '\\r\\n' < /root/.cumulusci/cumulusci.key)\"\n" > /etc/profile.d/cumulusci-key.sh
+
+RUN echo 'source /etc/profile.d/cumulusci-key.sh' >> /root/.bashrc
