@@ -1,2 +1,6 @@
 **/jsconfig.json
 **/.eslintrc.json
+
+# Org Metadata
+**/profiles/
+**/AppMenus/
