@@ -29,3 +29,5 @@ To work on this project in a scratch org:
   1. A code will be displayed in the terminal, copy the code
   1. Your browser will open, log in and enter in the code
   1. Github will be authenticated. Validate in your terminal `cci service list`
+  1. Authenticate to your DevHub using the **sf cli** `sf org login web --set-default-dev-hub --alias devhub`
+  1. Connect CumulusCI to the devhub org `cci service connect devhub <<MY-ALIAS>> --project --username <<Devhub-Username>>`
