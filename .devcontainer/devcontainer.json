@@ -5,6 +5,9 @@
     "context": ".."
   },
   "features": {},
+  "containerEnv": {
+    "SF_TEMP_SHOW_SECRETS": "true"
+  },
   "customizations": {
     "vscode": {
       "extensions": [
