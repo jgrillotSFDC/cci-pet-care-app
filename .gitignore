@@ -3,6 +3,9 @@
 /src.orig
 /src
 
+# CCI Test Results
+**/test_results.*
+
 # Python
 *.pyc
 __pycache__
