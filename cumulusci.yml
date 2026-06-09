@@ -25,3 +25,11 @@ tasks:
     run_tests:
         options:
             required_org_code_coverage_percent: 75
+
+    uninstall_packaged_incremental:
+        options:
+            ignore_types:
+                - RecordType
+                - ListView
+                - Report
+                - QuickAction
