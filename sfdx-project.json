@@ -5,6 +5,6 @@
         "default": true
     }
   ], 
-  "namespace": null, 
+  "namespace": "", 
   "sourceApiVersion": "66.0"
 }
